@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/css?family=Monoton);
+
+body {
+	text-align: center;
+}
+
+h1 {
+	font-family: Monoton;
+	font-size: 70px;
+	margin-bottom: 10px;
+}
+
+table, tr, td {
+  border: 1px solid black;
+}
+
+table {
+  	border-collapse: collapse;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+tr {
+  height: 20px;
+}
+
+td {
+  width: 20px;
+}
+
+input[type=number] {
+  width: 6em;
+}
