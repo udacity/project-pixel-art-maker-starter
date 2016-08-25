@@ -5,24 +5,21 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <h1>Lab: Pixel Art Maker</h1>
 
-<h1>Lab: Pixel Art Maker</h1>
+    <form id="sizePicker">
+        Grid Height:
+        <input type="number" id="input_height" name="height" min="1" value="1">
+        Grid Width:
+        <input type="number" id="input_width" name="width" min="1" value="1">
+        <input type="submit">
+    </form>
 
-<form id="sizePicker">
-  Grid Height:
-  <input type="number" id="input_height" name="height" min="1" value="1">
-  Grid Width:
-  <input type="number" id="input_width" name="width" min="1" value="1">
-  <input type="submit">
-</form>
+    <h4>Pick a color <input type="color" id="colorPicker"></h4>
 
+    <h4>Design Canvas</h4>
+    <table id="pixel_canvas"></table>
 
-<h4>Pick a color <input type="color" id="colorPicker">
-</h4>
-
-<h4>Design Canvas</h4>
-<table id="pixel_canvas"></table>
-
-<script src="designs.js"></script>
+    <script src="designs.js"></script>
 </body>
 </html>
