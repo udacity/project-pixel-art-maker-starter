@@ -1,5 +1,18 @@
-# pixel-art-lab
+# Pixel Art Lab
 
-My grandma loves cross stitch. For years, she’s drawn her patterns on graph paper, but lately, her arthritis has been troubling her and it’s getting more and more difficult to draw out her designs by hand. Let’s make her a digital cross stitch maker, so she can continue designing her amazing cross stitch patterns for many years to come.
+## Table of Contents
 
-Full lab instructions can be found here: https://docs.google.com/document/d/1KGV5od9fj3Od58RdcJwF4h_AT4Tg8a-6w22O8u_rIaM/edit# 
+* [Instructions](#instructions)
+* [Contributing](#contributing)
+
+## Instructions
+
+The starter project has some HTML and CSS styling to display a static version of Pixel Art Maker. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+
+To get started, open `designs.js` and start building out the app's functionality
+
+For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+
+## Contributing
+
+This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
