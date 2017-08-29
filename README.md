@@ -1,4 +1,4 @@
-# Pixel Art Lab
+# Pixel Art Maker Project
 
 ## Table of Contents
 
@@ -6,8 +6,6 @@
 * [Contributing](#contributing)
 
 ## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of Pixel Art Maker. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
 
 To get started, open `designs.js` and start building out the app's functionality
 
