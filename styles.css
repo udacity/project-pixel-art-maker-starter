@@ -1,16 +1,16 @@
 body {
     text-align: center;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Permanent Marker', cursive;
 }
 
 h1 {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 70px;
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
     margin: 0.2em;
 }
 
 h2 {
-    margin: 1em 0 0.25em;
+    margin: 2em 0 0.25em;
 }
 
 h2:first-of-type {
@@ -18,7 +18,7 @@ h2:first-of-type {
 }
 
 table, tr, td {
-    border: 1px solid #ad8f8f;
+    border: 2px solid #ad8f8f;
 }
 
 table {
@@ -53,8 +53,8 @@ input[type=number]:focus {
 input[type=submit] {
     width: 8em;
     height: 2em;
-    border-radius:5px;
-    background-color: #5c6ac4;
+    border-radius:7px;
+    background-color: #83c45c;
     margin: 3px;
     font-size: 16px;
     font-weight: bold;
@@ -64,9 +64,9 @@ input[type=submit] {
 }
 
 input[type=color] {
-    width: 8em;
-    height: 2em;
-    border-radius: 5px;
+    width: 7em;
+    height: 3em;
+    border-radius: 0px;
     padding:2px;
     outline:none;
 }
