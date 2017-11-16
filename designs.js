@@ -1,6 +1,6 @@
-const input_rows;
-const input_cols;
-const input_color = "#000000";
+let  input_rows;
+let input_cols;
+let input_color = "#000000";
 /**@constructor
   *This function is used to create a table with different columns and rows length 
 */
