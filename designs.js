@@ -1,6 +1,6 @@
-var input_rows;
-var input_cols;
-var input_color = "#000000";
+const input_rows;
+const input_cols;
+const input_color = "#000000";
 
 function makeGrid() {
   var table = document.getElementById("pixel_canvas");
