@@ -4,7 +4,7 @@ let input_color = "#000000";
 /**@constructor
   *This function is used to create a table with different columns and rows length 
 */
-function makeGrid(e) {
+function makeGrid() {
   var table = document.getElementById("pixel_canvas");
   table.innerHTML = "";
   while(table.rows.length > 0)
