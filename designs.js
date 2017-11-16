@@ -4,7 +4,7 @@ const input_color = "#000000";
 /**@constructor
   *This function is used to create a table with different columns and rows length 
 */
-function makeGrid() {
+function makeGrid(e) {
   var table = document.getElementById("pixel_canvas");
   table.innerHTML = "";
   while(table.rows.length > 0)
@@ -30,7 +30,7 @@ function makeGrid() {
       });
     }
   }
-  return false;
+  e.preventDefault();
 }
 
 document.getElementById("sizePicker").addEventListener("submit", function(evt) {
