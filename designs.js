@@ -30,7 +30,6 @@ function makeGrid(e) {
       });
     }
   }
-  e.preventDefault();
 }
 
 document.getElementById("sizePicker").addEventListener("submit", function(evt) {
