@@ -1,14 +1,15 @@
 const input_rows;
 const input_cols;
 const input_color = "#000000";
-
+//This function is used to create a table with different columns and rows length 
+//it also add the event click to add a color to the cell background
 function makeGrid() {
   var table = document.getElementById("pixel_canvas");
   table.innerHTML = "";
   while(table.rows.length > 0)
     table.deleteRow(0);
   input_rows = document.getElementById("input_height").value;
-  input_cols = document.getElementById("input_width").value;
+  input_cols = document.getElementById("input_width").value; 
   for (var i = 0; i < input_rows; i++) {
     var row_elem = table.insertRow(i);
     row_elem.setAttribute("class", "row");
