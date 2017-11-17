@@ -1,25 +1,24 @@
 body {
     text-align: center;
+    font-family: 'Permanent Marker', cursive;
 }
 
 h1 {
-    font-family: Monoton;
-    font-size: 70px;
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
     margin: 0.2em;
 }
 
 h2 {
-    margin: 1em 0 0.25em;
+    margin: 2em 0 0.25em;
 }
 
 h2:first-of-type {
     margin-top: 0.5em;
 }
 
-table,
-tr,
-td {
-    border: 1px solid black;
+table, tr, td {
+    border: 2px solid #ad8f8f;
 }
 
 table {
@@ -28,13 +27,59 @@ table {
 }
 
 tr {
-    height: 20px;
+    height: 40px;
 }
 
 td {
-    width: 20px;
+    width: 40px;
 }
 
 input[type=number] {
     width: 6em;
+    height:2em;
+    border-radius: 5px;
+    outline:none;
+    border: 2px solid #dadada;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+input[type=number]:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+input[type=submit] {
+    width: 8em;
+    height: 2em;
+    border-radius:7px;
+    background-color: #83c45c;
+    margin: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    outline:none;
+    margin-left:10px;
+}
+
+input[type=color] {
+    width: 7em;
+    height: 3em;
+    border-radius: 0px;
+    padding:2px;
+    outline:none;
+}
+
+#sizePicker {
+    margin-top: 5%;
+}
+
+#colorPicker,
+#pixel_canvas {
+    margin-top: 2%;
+}
+
+span {
+    font-size: 20px;
 }
