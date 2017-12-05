@@ -54,20 +54,35 @@ let canvasHeight = 1;
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid(event) {
-   const table = document.querySelector('#pixel_canvas');
-   var height=2;
-   var width=2;
-  var $tr = $('<tr></tr>');
-  var $td = $('<td></td>');
-        for (let row = 0; row <= 2; row++) {
-          row = table.insertRow(0)
-          for (let column = 0; column <= 2; column++) {
-              row.insertCell(1);
+   const table = $('#pixel_canvas');
+
+   table.html('');
+
+   var height=$('#input_width').val();
+   var width=$('#input_height').val();
+   var $tr = $('<tr></tr>');
+   var $td = $('<td></td>');
+   var row = '';
+   var td=''
+        for (let i = 0; i < height; i++) {
+          row += '<tr>'
+          for (let j = 0; j < width; j++) {
+              row+='<td></td>';
           }
+          row+='</tr>'
         }
+     table.append(row)
+     table.on('mousedown',function test(){
+       $('td').on('mouseenter',function draging(){
+       $(this).css('backgroundColor','red');
+       table.off('mouseup',test);
+       })
+       })
+
+
+
 
 }
-
 $('#submit').click(function (e) {
     e.preventDefault();
     makeGrid();
