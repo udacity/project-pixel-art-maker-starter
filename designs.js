@@ -1,7 +1,7 @@
 // $(function() {
 //   var app=(function() {
 //
-//     const colorPicker = $('#colorPicker');
+//
 //     const inputHeight = $('#input_height');
 //     const inputWidth = $('#input_width');
 //     const table = $('#pixel_canvas');
@@ -16,48 +16,9 @@
 //        heigth: height,
 //        paint: paint,
 //     }
-//     function makeGrid(){
-//       for (let row = 0; row <= height; row++) {
-//         table.append($tr);
-//         for (let column = 0; column <= width; column++) {
-//             $tr.append($td);
-//         }
-//       }
-//     }
-//     function paint(){
-//       $('td').on('mousedown',function(){
-//         $(this).css('backgroundColor','red');
-//       });
-//       console.log($(this).bind())
-//     }
-//
-//      function barc(){
-//        console.log(colorPicker);
-//      }
-//   })();
-//   app.bar();
-//   console.log(app.color);
-//     console.log(app.width);
-//       $('body').click(()=>console.log(app.heigth));
-//       app.paint();
-//
-// });
-// Select color input
-
-let color = '#000';
-let canvasWidth = 1;
-let canvasHeight = 1;
-// colorPicker.change(()=>{color=colorPicker.val()});
-// inputHeight.change(()=>{canvasHeight = inputHeight.val();});
-// inputWidth.change(()=>{canvasWidth = inputWidth.val();})
-
-// When size is submitted by the user, call makeGrid()
-
-function makeGrid(event) {
-   const table = $('#pixel_canvas');
-
-   table.html('');
-
+function makeGrid() {
+table.html('');
+colorPicker.change(()=>{color=colorPicker.val()});
    var height=$('#input_width').val();
    var width=$('#input_height').val();
    var $tr = $('<tr></tr>');
@@ -72,18 +33,59 @@ function makeGrid(event) {
           row+='</tr>'
         }
      table.append(row)
-     table.on('mousedown',function test(){
-       $('td').on('mouseenter',function draging(){
-       $(this).css('backgroundColor','red');
-       table.off('mouseup',test);
-       })
-       })
-
-
-
-
 }
+
+function paint(){
+  $('td').on('contextmenu', function(e){
+    e.preventDefault();
+    $(this).css({background: 'transparent'});
+    return false;
+   });
+ $("td").on('click',function(){
+     $(this).css({background: color});
+ });
+ $(document).on('mousedown' ,function() {
+   $("td").on('mouseover mouseleave',function(){
+     $(this).css({background: color});
+   });
+ })
+.on('mouseup', function() {
+   $("td").off('mouseover mouseleave');
+ });
+}
+//
+//      function barc(){
+//        console.log(colorPicker);
+//      }
+//   })();
+//   app.bar();
+//   console.log(app.color);
+//     console.log(app.width);
+//       $('body').click(()=>console.log(app.heigth));
+//       app.paint();
+//
+// });
+// Select color input
+
+
+// colorPicker.change(()=>{color=colorPicker.val()});
+// inputHeight.change(()=>{canvasHeight = inputHeight.val();});
+// inputWidth.change(()=>{canvasWidth = inputWidth.val();})
+
+// When size is submitted by the user, call makeGrid()
+const colorPicker = $('#colorPicker');
+ const table = $('#pixel_canvas');
+var color = '#000';
+
+
+       // $('td').mousedown(function() {
+       // });
+       //   $(this).css({background:"#333333"});
+
+
+
 $('#submit').click(function (e) {
     e.preventDefault();
     makeGrid();
+    paint();
 });

@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    background: green;
 }
 
 h1 {
@@ -16,7 +17,16 @@ h2:first-of-type {
     margin-top: 0.5em;
 }
 
-table,
+
+div{
+
+  max-width:300px;
+  max-height: 300px;
+  margin:0 auto;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+table
 tr,
 td {
     border: 1px solid black;
