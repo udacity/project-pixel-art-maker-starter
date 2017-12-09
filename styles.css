@@ -19,30 +19,36 @@ h2:first-of-type {
 
 
 div{
-
-  max-width:300px;
-  max-height: 300px;
+  max-width:1000px;
+  max-height: 1000px;
   margin:0 auto;
-  overflow-x: auto;
-  overflow-y: auto;
+  overflow:auto;
 }
-table
-tr,
+table{
+  max-width:100%;
+  background: #FCFFCF;
+}
+
 td {
+  box-sizing: border-box;
+}
+.grid{
     border: 1px solid black;
 }
-
+.zoom{
+  transform: scale(3);
+}
 table {
     border-collapse: collapse;
     margin: 0 auto;
 }
 
 tr {
-    height: 20px;
+    height: 10px;
 }
 
 td {
-    width: 20px;
+  width: 10px;
 }
 
 input[type=number] {
