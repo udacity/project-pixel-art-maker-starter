@@ -1,20 +1,107 @@
-div{
-  max-width:1000px;
-  max-height: 1000px;
-  margin:0 auto;
-  overflow:auto;
+body{
+  background: #e2e1e0;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
 }
-table{
-  max-width:100%;
-  background: #FCFCFC;
-  margin: 0 auto;
-}
-
 td {
   box-sizing: border-box;
 }
-tr{height: 10px;}
-td{width:10px;}
+tr{
+  height: 10px;
+}
+td{
+  width: 10px;
+}
+.header,
+.toolbox,
+.footer,
+.canvas{
+  max-width: 100%;
+  width: 1000px;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+}
+.header,
+.toolbox,
+.footer{
+  background: #fff;
+  box-shadow:
+              0 10px 20px rgba(0,0,0,0.19),
+              0 6px 6px rgba(0,0,0,0.23);
+}
+.toolbox{
+  position: relative;
+}
+.canvas{
+  display: none;
+}
+.header__title{
+  font-size: 2rem;
+  line-height:1.5;
+}
+.form__input{
+  width:50px;
+  padding-left:5px;
+}
+.canvas__title,
+.toolbox__title{
+  font-size: 1.5rem;
+  line-height:1.5;
+}
+.toolbox__menu,
+.toolbox__form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toolbox__input{
+  display: none;
+}
+label+label{
+  margin-left: 10px;
+}
+.toolbox__label,
+.toolbox_button{
+  color: #bbb;
+  margin:10px;
+}
+.toolbox__label:hover,
+.toolbox_button:hover{
+  color: #000;
+}
+.toolbox__label:hover::before,
+.toolbox_button:hover::before{
+  position: absolute;
+  content:attr(data-content);
+  display: block;
+  font-size: 0.8rem;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: center;
+  text-transform: uppercase;
+}
+.active{
+  color: #000;
+}
+.toolbox__form .form_submit{
+  border: 1px solid grey;
+  background:#e2e1e0;
+}
+
+.canvas__container{
+  margin:0 auto;
+  overflow-x:auto;
+  overflow-y:auto;
+}
+.canvas__table{
+  max-width:100%;
+  background: #FCFCFC;
+  margin: 0 auto;
+  table-layout: fixed;
+}
 .grid{
     border: 1px solid black;
 }

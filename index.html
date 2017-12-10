@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Pixel Art Maker!</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/styles.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -11,24 +12,7 @@
   <header class="header">
     <h1 class="header__title">Lab: Pixel Art Maker</h1>
   </header>
-  <section class="toolbox">
-    <h2>Choose Grid Size</h2>
-    <form class="toolbox__form" id="sizePicker">
-        Grid Height:
-        <input class="form__input" id="input_height">
-        Grid Width:
-        <input class="form__input" id="input_width" >
-        <input class="form_submit" id="submit" type="submit">
-    </form>
-    <div class="toolbox__menu">
-      <input class="toolbox__input" type="color" id="colorPicker">
-      <input class="toolbox__input" type="color" id="bgColor">
-      <button class="toolbox_grid" id="grid" type="button" name="button">Grid</button>
-      <button class="toolbox_grid" id="eraser" type="button" name="button">eraser</button>
-      <button class="toolbox_zoom" id="zoom" type="button" name="button">zoom</button>
-    </div>
-  </section>
-  <section class="canvas">
+  <section class="canvas" id="canvas">
     <h2 class="canvas__title">Design Canvas</h2>
     <div class="canvas__container">
       <table class="canvas__table" id="pixel_canvas"></table>
@@ -37,6 +21,30 @@
       <div class="zoom_controler"></div>
     </div>
   </section>
+  <section class="toolbox">
+    <h2 class="toolbox__title">Choose Grid Size</h2>
+    <form class="toolbox__form" id="sizePicker">
+        <label>Height: <input class="form__input" id="input_height"></label>
+        <label>Width: <input class="form__input" id="input_width" ></label>
+        <input class="form_submit" id="submit" value="Set" type="submit">
+    </form>
+    <div class="toolbox__menu">
+      <label class="toolbox__label" data-content="Paint Color" tabindex="0">
+        <span class="fa fa-paint-brush active" aria-hidden="true"></span>
+        <input class="toolbox__input" type="color" id="colorPicker">
+      </label>
+      <label class="toolbox__label" data-content="Background Color" tabindex="0">
+        <span class="fa fa-window-maximize" aria-hidden="true"></span>
+        <input class="toolbox__input" type="color" id="bgColor">
+      </label>
+      <button class="toolbox_button" id="grid" type="button" name="button" data-content="Toggle Grid"><span class="fa fa-th-large" aria-hidden="true"></span></button>
+      <button class="toolbox_button" id="eraser" type="button" name="button" data-content="eraser"><span class="fa fa-eraser" aria-hidden="true"></span></button>
+      <button class="toolbox_button" id="zoom" type="button" name="button"><span class="fa fa-search" aria-hidden="true" data-content="zoom" disabled></span></button>
+    </div>
+  </section>
+  <!-- <footer class="footer">
+    <p>Made by Kuba Domańśki</p>
+  </footer> -->
   <script src="app/designs.js"></script>
 </body>
 </html>

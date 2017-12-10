@@ -7,7 +7,9 @@ $(function() {
     const $inputWidth = $('#input_width');
     const $colorPicker = $('#colorPicker');
     const $eraserButton = $('#eraser');
-      const $zoom = $('#zoom');
+    const $zoom = $('#zoom');
+    const $canvas = $('#canvas');
+    const $fa = $('.fa');
 
     var initialize = false;
 
@@ -88,18 +90,25 @@ $(function() {
         $table.addClass('zoom');
     });
     }
-
+    function activateIcon(){
+      $fa.on('click', function(){
+        $('.active').removeClass('active');
+        $(this).addClass('active');
+      })
+    }
     function init() {
       if (initialize) {
         return;
       }
       initialize = true;
+      activateIcon();
       changeBackground();
       $('#submit').click(function(e) {
         e.preventDefault();
         makeGrid();
         zoom();
         paint();
+        $canvas.show(2000);
         toggleGrid();
 
       });
