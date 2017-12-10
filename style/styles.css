@@ -1,0 +1,23 @@
+div{
+  max-width:1000px;
+  max-height: 1000px;
+  margin:0 auto;
+  overflow:auto;
+}
+table{
+  max-width:100%;
+  background: #FCFCFC;
+  margin: 0 auto;
+}
+
+td {
+  box-sizing: border-box;
+}
+tr{height: 10px;}
+td{width:10px;}
+.grid{
+    border: 1px solid black;
+}
+.zoom{
+  transform: scale(3);
+}

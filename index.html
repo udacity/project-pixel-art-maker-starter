@@ -3,32 +3,40 @@
 <head>
     <title>Pixel Art Maker!</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/styles.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 </head>
 <body>
-    <h1>Lab: Pixel Art Maker</h1>
-
+  <header class="header">
+    <h1 class="header__title">Lab: Pixel Art Maker</h1>
+  </header>
+  <section class="toolbox">
     <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
+    <form class="toolbox__form" id="sizePicker">
         Grid Height:
-        <input type="number" id="input_height" name="height" min="1" value="1">
+        <input class="form__input" id="input_height">
         Grid Width:
-        <input type="number" id="input_width" name="width" min="1" value="1">
-        <input id="submit" type="submit">
+        <input class="form__input" id="input_width" >
+        <input class="form_submit" id="submit" type="submit">
     </form>
-
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker">
-    <input type="color" id="bgColor">
-    <button id="grid" type="button" name="button">Grid</button>
-    <button id="eraser" type="button" name="button">gumka</button>
-    <button id="zoom" type="button" name="button">powiekszenie</button>
-
-    <h2>Design Canvas</h2>
-    <div>
-      <table id="pixel_canvas"></table>
+    <div class="toolbox__menu">
+      <input class="toolbox__input" type="color" id="colorPicker">
+      <input class="toolbox__input" type="color" id="bgColor">
+      <button class="toolbox_grid" id="grid" type="button" name="button">Grid</button>
+      <button class="toolbox_grid" id="eraser" type="button" name="button">eraser</button>
+      <button class="toolbox_zoom" id="zoom" type="button" name="button">zoom</button>
     </div>
-    <script src="designs.js"></script>
+  </section>
+  <section class="canvas">
+    <h2 class="canvas__title">Design Canvas</h2>
+    <div class="canvas__container">
+      <table class="canvas__table" id="pixel_canvas"></table>
+    </div>
+    <div class="zoom">
+      <div class="zoom_controler"></div>
+    </div>
+  </section>
+  <script src="app/designs.js"></script>
 </body>
 </html>

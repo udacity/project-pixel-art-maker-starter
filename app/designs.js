@@ -7,7 +7,7 @@ $(function() {
     const $inputWidth = $('#input_width');
     const $colorPicker = $('#colorPicker');
     const $eraserButton = $('#eraser');
-    const $zoom = $('#zoom');
+      const $zoom = $('#zoom');
 
     var initialize = false;
 
@@ -16,9 +16,9 @@ $(function() {
     }
 
     function makeGrid() {
-      var height = $inputHeight.val();
-      var width = $inputWidth.val();
-      var row = '';
+      let height = $inputHeight.val();
+      let width = $inputWidth.val();
+      let row = '';
       $table.html('');
       for (let i = 0; i < height; i++) {
         row += '<tr>';
@@ -27,7 +27,7 @@ $(function() {
         }
         row += '</tr>';
       }
-      $table.append(row)
+      $table.append(row);
     }
 
     function paint() {
@@ -42,7 +42,6 @@ $(function() {
           cursor: 'pointer'
         });
         isEraser = !isEraser;
-        console.log(isEraser);
         return isEraser ? color = colorBackup : color = 'transparent';
       });
       $td.on('contextmenu', function(e) {
@@ -70,7 +69,7 @@ $(function() {
     }
 
     function changeBackground() {
-      var bgColor = $backgroundPicker.val('#FCFFCF');
+      let bgColor = $backgroundPicker.val('#FCFCFC');
       $backgroundPicker.on('change', () => {
         bgColor = $backgroundPicker.val()
         $table.css({
@@ -80,12 +79,14 @@ $(function() {
     }
 
     function toggleGrid() {
-      var $td = $('td');
+      const $td = $('td');
       $gridButton.on('click', () => $td.toggleClass('grid'));
     }
 
     function zoom() {
-      $zoom.on('click', () => $table.toggleClass('zoom'));
+      $zoom.on('click', () => {
+        $table.addClass('zoom');
+    });
     }
 
     function init() {
@@ -97,9 +98,10 @@ $(function() {
       $('#submit').click(function(e) {
         e.preventDefault();
         makeGrid();
+        zoom();
         paint();
         toggleGrid();
-        zoom();
+
       });
     }
   })();
