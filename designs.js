@@ -22,10 +22,11 @@ function makeGrid(e) {
   for(var i = 0; i < height; i++){
     tableRows += '<tr>';
     for(var j = 0; j < width; j++){
-      tableRows += '<td class=""></td>';
+      tableRows += '<td></td>';
     }
     tableRows += '</tr>';
   }
+  console.log(tableRows);
   canvas.html(tableRows);
 
   canvas.delegate('td', 'mousedown', pickColor);
