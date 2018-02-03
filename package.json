@@ -1,0 +1,11 @@
+{
+  "name": "project-pixel-art-maker-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/carlox7/project-pixel-art-maker-starter.git",
+  "author": "Carlo Santos <carlox7@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^4.16.0"
+  }
+}
