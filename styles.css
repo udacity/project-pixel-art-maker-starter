@@ -1,9 +1,28 @@
 body {
     text-align: center;
+    margin: 0;
 }
+
+.menu {
+    background-color: black;
+    color: blue;
+    height: 56px;
+    margin: 0;
+}
+
+.logo_glyph {
+    width: 24px;
+    height: 24px;
+}
+.logo_type {
+    height: 20px;
+
+}
+
 
 h1 {
     font-family: Monoton;
+
     font-size: 70px;
     margin: 0.2em;
 }
