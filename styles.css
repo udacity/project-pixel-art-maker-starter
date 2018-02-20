@@ -3,16 +3,25 @@ body {
     margin: 0;
 }
 
+.title-bar{
+    background-color:black;
+    padding-left: 16px;
+    padding-right: 16px;   
+}
+
 .menu {
     background-color: black;
     color: blue;
     height: 56px;
     margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 .logo_glyph {
     width: 24px;
     height: 24px;
+    padding-right: 16px;
 }
 .logo_type {
     height: 20px;
