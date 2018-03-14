@@ -4,25 +4,40 @@
     <title>Pixel Art Maker!</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body>
     <h1>Lab: Pixel Art Maker</h1>
+    
+    <marquee>This is a cool pixel art generator. Prepare to have your mind blown</marquee>
 
     <h2>Choose Grid Size</h2>
+
+    <p><em>The form below will draw a grid based on your specifications. Each time you click "Subbmit", the grid will be drawn anew</em></p>
+
+
+
     <form id="sizePicker">
         Grid Height:
         <input type="number" id="inputHeight" name="height" min="1" value="1">
         Grid Width:
-        <input type="number" id="inputWeight" name="width" min="1" value="1">
+        <input type="number" id="inputWidth" name="width" min="1" value="1">
         <input type="submit">
     </form>
+
 
     <h2>Pick A Color</h2>
     <input type="color" id="colorPicker">
 
+    <p><em>Pick a color using Chrome's cool color picker. Now click a cell in the grid. Feel free to keep changing colors</em></p>
+    
+
     <h2>Design Canvas</h2>
     <table id="pixelCanvas"></table>
-
+    
     <script src="designs.js"></script>
+
+    
 </body>
 </html>
