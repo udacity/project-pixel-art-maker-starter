@@ -17,9 +17,9 @@ function makeGrid() {
   gridWidthVal = $('#inputWidth').val();
   colorVal = $('#colorPicker').val();
   //create canvas rows and cols
-  for(let row=0; row < gridWidthVal; row++){
+  for(let row=0; row < gridHeightVal; row++){
     grid.append(document.createElement('tr'));
-    for( let col=0; col < gridHeightVal; col++){
+    for( let col=0; col < gridWidthVal; col++){
       $('tr:last').append(document.createElement('td'));
     }
   }
