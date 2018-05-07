@@ -2,27 +2,38 @@
 <html>
 <head>
     <title>Pixel Art Maker!</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h1>Lab: Pixel Art Maker</h1>
-
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="inputHeight" name="height" min="1" value="1">
-        Grid Width:
-        <input type="number" id="inputWeight" name="width" min="1" value="1">
-        <input type="submit">
-    </form>
-
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker">
-
-    <h2>Design Canvas</h2>
-    <table id="pixelCanvas"></table>
-
+<body class="pixel-art">
+    <header>
+        <h1>Lab: Pixel Art Maker</h1>
+    </header>
+    <section class="pixel-art-grid-form">
+        <h2>Choose Grid Size</h2>
+        <form id="sizePicker">
+            <div class="inputCont">
+                <label for="inputHeight">Grid Height:</label>
+                <input type="number" id="inputHeight" name="height" min="1" value="1">
+            </div>
+            <div class="widthCont">
+                <label for="inputWidth">Grid Width:</label>
+                <input type="number" id="inputWidth" name="width" min="1" value="1">
+            </div>
+            <input type="submit" id="submitGrid">
+        </form>
+    </section>
+    <section class="pixel-art-color">
+        <h2 class="mobWidth">Pick A Color</h2>
+        <div class="colorCont">
+            <input type="color" id="colorPicker">
+        </div>
+    </section>
+    <section class="pixel-art-canvas">
+        <h2>Design Canvas</h2>
+        <table id="pixelCanvas"></table>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="designs.js"></script>
 </body>
 </html>
