@@ -1,5 +1,8 @@
+* {
+  box-sizing: border-box;
+}
 html{
-    height: 100%;
+  height: 100%;
 }
 .pixel-art {
   display: block;
@@ -23,6 +26,8 @@ header {
 .pixel-art-grid-form,
 .pixel-art-color {
   display: block;
+  float: left;
+  width: 100%;
   align-items: center;
   padding: 15px;
   background-color: #f0f0f0;
@@ -31,29 +36,45 @@ header {
 }
 .pixel-art-grid-form h2,
 .pixel-art-color h2 {
-  display: inline-block;
-  min-width: 200px;
-  padding: 0 30px;
+  float: left;
+  width: 20%;
   margin: 0;
   text-align: left;
+  font-size: 1.5em;
+  vertical-align: middle;
 }
 .pixel-art-grid-form form,
-.pixel-art-color input[type=color] {
-  display: inline;
+.pixel-art-color .colorCont {
+  float: left;
+  width: 80%;
+}
+.colorCont input {
+  width: 100px;
+}
+.inputCont,
+.widthCont {
+  display: inline-block;
+  width: 41%;
+}
+.inputCont label,
+.widthCont label {
+  display: inline-block;
+  min-width: 7em;
 }
 .pixel-art-grid-form form input[type=number] {
-  min-width: 250px;
-  padding: 8px 3px;
+  width: calc(100% - 11em);
+  padding: 0.9em 0.4em;
   border-radius: 4px;
   border: 1px solid;
   border-color: #dddddd;
   box-shadow: 0 0 2px #dddddd;
 }
 .pixel-art-grid-form form input[type=submit] {
+  width: 15%;
   min-width: 100px;
-  padding: 6px 3px;
+  padding: 0.4em 0.3em;
   color: #f7f7f7;
-  font-size: 14px;
+  font-size: 1em;
   border-radius: 4px;
   background-color: #2fcb6f;
   border: 1px solid;
@@ -67,7 +88,8 @@ header {
   background-color: #eeeeee;
 }
 .pixel-art-canvas {
-  display: block;
+  float: left;
+  width: 100%;
 }
 .pixel-art-canvas h2 {
   text-align: center;
@@ -85,4 +107,40 @@ header {
 .pixel-art-canvas td {
   width: 20px;
   height: 20px;
+}
+@media all and (max-width:991px) {
+  .pixel-art-grid-form h2,
+  .pixel-art-color h2,
+  .pixel-art-grid-form form {
+    width: 100%;
+  }
+  .mobWidth {
+    width: 20% !important;
+  }
+  .inputCont,
+  .widthCont {
+    width: 49%;
+    padding: 0;
+    margin: 5px 0;
+  }
+}
+@media all and (max-width:768px) {
+  .pixel-art-grid-form h2,
+  .pixel-art-color h2,
+  .pixel-art-grid-form form,
+  .inputCont,
+  .widthCont {
+    width: 100%;
+  }
+  .inputCont,
+  .widthCont {
+    padding: 0;
+    margin: 5px 0;
+  }
+  .mobWidth {
+    width: 50% !important;
+  }
+  .colorCont {
+    width: 50% !important;
+  }
 }
