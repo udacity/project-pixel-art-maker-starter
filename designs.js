@@ -7,8 +7,11 @@ let color= document.getElementById('colorPicker');
 
 size.addEventListener('submit',function(event){
  event.preventDefault();
+ clearGrid();
  makeGrid();
 });
+
+//makeGrid logic
 function makeGrid() {
   for(let i=0;i<ht.value;i++)
     {
@@ -17,5 +20,13 @@ function makeGrid() {
         {
           const cell=row.insertCell(j);
         }
+    }
+}
+
+//clearGrid logic
+function clearGrid(){
+  while(newTable.rows.length>0)
+    {
+      newTable.deleteRow(0);
     }
 }
