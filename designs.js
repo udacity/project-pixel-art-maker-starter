@@ -5,6 +5,7 @@ let newTable=document.getElementById('pixelCanvas');
 let size=document.getElementById('sizePicker');
 let color= document.getElementById('colorPicker');
 
+//submit button fuctionality
 size.addEventListener('submit',function(event){
  event.preventDefault();
  clearGrid();
@@ -30,3 +31,9 @@ function clearGrid(){
       newTable.deleteRow(0);
     }
 }
+
+//Coloring pixel
+newTable.addEventListener('click',function(event){
+  if(event.target.nodeName==='TD')
+  event.target.style.backgroundColor=color.value;
+})
