@@ -10,7 +10,6 @@ function makeGrid(event) {
 
     const m = document.querySelector('#inputHeight').value;
     const n = document.querySelector('#inputWidth').value;
-    const color = document.querySelector('input#colorPicker').value;
     const pixelTable = document.querySelector('#pixelCanvas');
     
     while (pixelTable.firstChild) {
@@ -22,6 +21,7 @@ function makeGrid(event) {
         for (let width = 0; width < n; width++) {
             const cell = document.createElement('td');
             cell.addEventListener('click', function () {
+                const color = document.querySelector('input#colorPicker').value;
                 cell.style.backgroundColor = color;
             });
             cell.addEventListener('dblclick', function () {
