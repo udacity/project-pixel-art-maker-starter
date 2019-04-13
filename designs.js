@@ -6,5 +6,8 @@
 function makeGrid() {
 
 // Your code goes here!
-
+    
 }
+
+const form = document.querySelector('form#sizePicker');
+form.addEventListener('submit', makeGrid);
