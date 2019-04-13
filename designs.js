@@ -13,7 +13,19 @@ function makeGrid(event) {
     const color = document.querySelector('input#colorPicker').value;
     const pixelTable = document.querySelector('#pixelCanvas');
 
-    
+    for (let height = 0; height < m; height++) {
+        const row = document.createElement('tr');
+        for (let width = 0; width < n; width++) {
+            const cell = document.createElement('td');
+            cell.addEventListener('click', function () {
+                cell.style.backgroundColor = color
+            });
+            row.appendChild(cell);
+        }
+        pixelTable.appendChild(row)
+    }
+
+
     console.log(`The size is ${m}*${n} and color is ${color}`);
 }
 
