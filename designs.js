@@ -12,7 +12,11 @@ function makeGrid(event) {
     const n = document.querySelector('#inputWidth').value;
     const color = document.querySelector('input#colorPicker').value;
     const pixelTable = document.querySelector('#pixelCanvas');
-
+    
+    while (pixelTable.firstChild) {
+        pixelTable.removeChild(pixelTable.firstChild);
+    }
+    
     for (let height = 0; height < m; height++) {
         const row = document.createElement('tr');
         for (let width = 0; width < n; width++) {
