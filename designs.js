@@ -16,13 +16,16 @@ function makeGrid(event) {
     while (pixelTable.firstChild) {
         pixelTable.removeChild(pixelTable.firstChild);
     }
-    
+
     for (let height = 0; height < m; height++) {
         const row = document.createElement('tr');
         for (let width = 0; width < n; width++) {
             const cell = document.createElement('td');
             cell.addEventListener('click', function () {
-                cell.style.backgroundColor = color
+                cell.style.backgroundColor = color;
+            });
+            cell.addEventListener('dblclick', function () {
+                cell.style.backgroundColor = 'white' ;
             });
             row.appendChild(cell);
         }
