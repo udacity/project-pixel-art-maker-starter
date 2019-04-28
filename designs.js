@@ -1,5 +1,9 @@
 // Select color input
 var colorPicker = document.getElementById("colorPicker").value;
+canvas.addEventListener("click", function(event) {
+  let color = document.getElementById("colorPicker").value;
+  event.target.style.backgroundColor = color;
+});
 
 // Select size input
 var sizePicker = document.getElementById("sizePicker");
@@ -22,7 +26,4 @@ function makeGrid() {
       row.appendChild(column);
     }
   }
-
-  console.log("called function make grid");
-  console.log(colorPicker);
 }
