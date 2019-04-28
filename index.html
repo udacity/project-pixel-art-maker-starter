@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Autumn's 1Pixel Art Maker!</title>
+    <title>Autumn's Pixel Art Maker!</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Monoton"
@@ -13,10 +13,24 @@
 
     <h2>Choose Grid Size</h2>
     <form id="sizePicker">
-      Grid Height:
-      <input type="number" id="inputHeight" name="height" min="1" value="1" />
-      Grid Width:
-      <input type="number" id="inputWidth" name="width" min="1" value="1" />
+      Grid Height (1-50):
+      <input
+        type="number"
+        id="inputHeight"
+        name="height"
+        min="1"
+        max="5000"
+        value="10"
+      />
+      Grid Width (1-50):
+      <input
+        type="number"
+        id="inputWidth"
+        name="width"
+        min="1"
+        max="5000"
+        value="10"
+      />
       <input type="submit" />
     </form>
 
@@ -24,7 +38,7 @@
     <input type="color" id="colorPicker" />
 
     <h2>Design Canvas</h2>
-    <table id="pixelCanvas"></table>
+    <table id="canvas"></table>
 
     <script src="designs.js"></script>
   </body>
