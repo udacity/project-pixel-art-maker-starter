@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+- [Instructions](#instructions)
+- [Contributing](#contributing)
 
 ## Instructions
 
