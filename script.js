@@ -20,12 +20,16 @@ function changeTheColor(elem) {
 //    console.log('An Element was clicked. color'+ vSelectColor);
 }
 
+// Clean Table for a new setting
+
 function cleanTable(){
   let lengthR =  table.rows.length;
   for (oldRow = 0; oldRow < lengthR; oldRow++){
     table.deleteRow(-1);
   }
 }
+
+// clean old and create new table
 
 function makeGrid(heightSize, widthSize ) {
 //  console.log('WE should start draw matrix with  ' + heightSize + ' and ' + widthSize);
@@ -40,6 +44,8 @@ function makeGrid(heightSize, widthSize ) {
     }
   }}
 
+// Event Listener for the form
+
 form.addEventListener('submit', function (eve) {
   eve.preventDefault();
   let heightSize = sizeInputs[0].value;
@@ -48,6 +54,6 @@ form.addEventListener('submit', function (eve) {
 //  console.log('I have called makeGrid ');
 });
 
-// Your code goes here!
+// Your code - only the EventListener for the pixelmaker
 
 table.addEventListener('click', changeTheColor);
