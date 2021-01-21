@@ -19,22 +19,28 @@ h2:first-of-type {
 table,
 tr,
 td {
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 table {
-    border-collapse: collapse;
+    border-collapse: separate;
     margin: 0 auto;
 }
 
 tr {
-    height: 20px;
+    height: 6px;
 }
 
 td {
-    width: 20px;
+    width: 6px;
 }
 
 input[type=number] {
     width: 6em;
+}
+
+table#pixelCanvas {
+    width: 256px;
+    height: 256px;
+    border: 5px solid black;
 }
