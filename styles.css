@@ -1,5 +1,7 @@
 body {
     text-align: center;
+    background-color: #C5B7A0;
+    font-family: Arial;
 }
 
 h1 {
@@ -10,10 +12,16 @@ h1 {
 
 h2 {
     margin: 1em 0 0.25em;
+    font-family: Monoton;
 }
 
 h2:first-of-type {
     margin-top: 0.5em;
+}
+
+h4 {
+    margin: 1em 0 0.75em;
+    text-transform: uppercase;
 }
 
 table,
@@ -25,6 +33,7 @@ td {
 table {
     border-collapse: collapse;
     margin: 0 auto;
+
 }
 
 tr {
@@ -33,8 +42,65 @@ tr {
 
 td {
     width: 20px;
+    background-color: white;
 }
 
 input[type=number] {
     width: 6em;
+    margin-bottom: 5px;
+}
+
+#colorPicker {
+    /* padding: 0; */
+    border: none;
+    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+#colorPicker::-webkit-color-swatch {
+    border-radius: 20px;
+}
+#colorPicker::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.inputs {
+    width: 500px;
+    height: 160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+    border-radius: 7px;
+    border: 1px solid #dcdcdc;
+    padding-left: 2em; 
+    padding-top: .5em;
+    background-color : white;
+}
+
+.column {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.column p{
+    margin: .5em;
+}
+
+#submitButton, .fill-button{
+    box-shadow: inset 0px 1px 0 0 #fff;
+    background: linear-gradient(#f9f9f9 5%, #e9e9e9 100%);
+    border-radius: 7px;
+    border: 1px solid #dcdcdc;
+    font-weight: bold;
+    padding: 6px 14px;
+    text-decoration: none;
+    cursor: pointer;
+
 }
