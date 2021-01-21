@@ -7,6 +7,8 @@ let eraseMode = document.querySelector('.erase-mode');
 let drawMode = document.querySelector('.draw-mode');
 let fillButton = document.querySelector('.fill-button');
 
+
+//Function to create grid
 let makeGrid = (event) => {
     event.preventDefault()
     //Deletes old table
@@ -26,7 +28,7 @@ let makeGrid = (event) => {
         }
     }
 }
-//Listens for submit input on form.
+//Adding Listener for the submit input on form.
 sizePickerForm.addEventListener('submit', makeGrid);
 
 let down = false;
