@@ -15,8 +15,8 @@ let makeGrid = () => {
         const row = gridTable.insertRow(i);
         for (let j=0; j<width.value; j++){
             const cell = row.insertCell(j);
-            cell.addEventListener('click', function() {
-                this.style.backgroundColor = color.value; 
+            cell.addEventListener('click', () => {
+                cell.style.backgroundColor = color.value;
             });
         }
     }
