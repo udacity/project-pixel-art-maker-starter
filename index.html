@@ -9,12 +9,12 @@
     <h1>Pixel Art Maker</h1>
 
     <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
+    <form id="sizePicker" onSubmit="return formSubmit(e)">
         Grid Height:
         <input type="number" id="inputHeight" name="height" min="1" value="1">
         Grid Width:
         <input type="number" id="inputWidth" name="width" min="1" value="1">
-        <input type="submit">
+        <input type="submit" id="submitButton">
     </form>
 
     <h2>Pick A Color</h2>

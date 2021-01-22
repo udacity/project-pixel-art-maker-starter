@@ -2,18 +2,40 @@
 // Select size input
 
 // When size is submitted by the user, call makeGrid()
-const table = document.getElementById('pixelCanvas');
 
-var rows = document.getElementById("inputHeight").value;
-var cols = document.getElementById("inputWidth").value;
+const submit = document.getElementById('submitButton');
+const table = document.getElementById('pixelCanvas');
+const color = document.getElementById("colorPicker");
+
+// $('#sizePicker').submit(function(e) {
+//     e.preventDefault();
+//     const rows = (document.getElementById("inputHeight").value;
+//     const cols = (document.getElementById("inputWidth").value;
+//     makeGrid(rows, cols);
+// });
+
+function formSubmit() {
+    const rows = document.getElementById("inputHeight").value;
+    const cols = document.getElementById("inputWidth").value;
+    makeGrid(rows,cols);
+    return false;
+}
+
+
 
 function makeGrid(rows, cols) {
+    
     for (r=0; r<rows; r++) {
-        var row = table.insertRow(0);
-        table.insertRow(r);
+        var row = table.insertRow(r);
         for (c=0; c<cols; c++)
-            row.insertCell(0);
+            var cell = row.insertCell(c);
+            cell.textContent = r+":"+c;
+            cell.addEventListener("click", respondToClick)
     };
 };
 
-makeGrid(10, 10);
+function respondToClick(e) {
+    console.log("A cell was clicked: "+e.target.textContent)
+}
+
+
