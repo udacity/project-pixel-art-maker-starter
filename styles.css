@@ -20,21 +20,22 @@ table,
 tr,
 td {
     border-collapse: collapse;
-    border: 1px solid black;
+    padding: 0px;
+    margin: 0 auto;
 }
 
 table {
-
     margin: 0 auto;
 }
 
 tr {
-    height: 10px;
-    width: 150%;
+    height: 100%;
 }
 
 td {
-    width: 10px;
+    height: 31px;
+    width: 31px;
+    border: 1px solid black;
 }
 
 input[type=number] {
