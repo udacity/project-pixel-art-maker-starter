@@ -3,11 +3,10 @@
 
 // When size is submitted by the user, call makeGrid()
 
-const submit = document.getElementById('submitButton');
-const color = document.getElementById("colorPicker");
+const colorPicker = document.getElementById("colorPicker");
 
 function formSubmit(event) {
-    event.preventDefault(); // stops form submission
+    event.preventDefault(); // stops form submission action
     const table = document.getElementById('pixelCanvas');
     table.innerHTML = "";  // table element gets cleared here
 	const rows = document.getElementById("inputHeight").value;
@@ -22,12 +21,11 @@ function makeGrid(rows, cols) {
         var row = table.insertRow(r);
         for (c=0; c<cols; c++) {
         	var cell = row.insertCell(c);
-            // cell.textContent = r+":"+c;
-            cell.addEventListener("click", respondToClick)
-        }
+            cell.addEventListener("click", e => {
+                e.target.style.background = colorPicker.value;
+            });
+        };
     };
 };
 
-function respondToClick(e) {
-    console.log("A cell was clicked: "+e.target.textContent)
-}
+makeGrid(20, 20);
