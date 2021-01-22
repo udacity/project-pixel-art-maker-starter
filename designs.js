@@ -3,8 +3,6 @@
 
 // When size is submitted by the user, call makeGrid()
 
-
-
 function formSubmit(event) {
     event.preventDefault(); // stops form submission action
     var table = document.getElementById('pixelCanvas');
