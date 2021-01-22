@@ -6,9 +6,10 @@
 const submit = document.getElementById('submitButton');
 const color = document.getElementById("colorPicker");
 
-
 function formSubmit(event) {
-	event.preventDefault();
+    event.preventDefault(); // stops form submission
+    const table = document.getElementById('pixelCanvas');
+    table.innerHTML = "";  // table element gets cleared here
 	const rows = document.getElementById("inputHeight").value;
     const cols = document.getElementById("inputWidth").value;
     makeGrid(rows, cols);
