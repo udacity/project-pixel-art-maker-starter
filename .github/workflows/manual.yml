@@ -40,7 +40,7 @@ jobs:
            PR title: ${{ github.event.pull_request.title }}  
            PR description: ${{ github.event.pull_request.description }}  
            In addition, please resolve other issues, if any. 
-        fields: '{"components": [{"name":"Github PR"}], "customfield_16449":"https://classroom.udacity.com/nanodegrees/nd000/parts/82f18d18-0c75-4e6b-89ad-a659fbd21185/modules/27714ef8-e678-4eb6-8faa-9a581e961797/lessons/03ab9590-9a37-4797-ab0a-b9313561fc99/concepts/b42d2144-5a06-4687-b42c-3d859023ef6f", "customfield_16450":"Resolve the PR", "labels": ["github"]}'
+        fields: '{"components": [{"name":"nd000 - Intro to Programming ND"}], "customfield_16449":"https://classroom.udacity.com/nanodegrees/nd000/dashboard/overview", "customfield_16450":"Resolve the PR", "labels": ["github"], "priority":{"id": "4"}}'
 
     - name: Log created issue
       run: echo "Issue ${{ steps.create.outputs.issue }} was created"
