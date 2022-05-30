@@ -1,60 +1,41 @@
-"colorPicker" = document.querySelector("colorPicker")
+// add event listener When form gets submitted and call makeGrid() 
+document.querySelector("#sizePicker").addEventListener("submit", function(e) {
+    e.preventDefault();
+    makeGrid();
+}, false);
 
-// Select color input
-function addColor();
-let color = ("colorPicker").val();
-if ((this).attr("style")) {
-    (this).removeAttr("style")
-    else :
-        (this).attr("style", "backgroundColor:" + color);
-    ("td").click
-};
-// Select size input
-("sizePicker").submit;
-
-function makeGrid(event): {
-    event.preventDefault();
-    height = ("inputHeight").val();
-    width = ("inputWidth").val();
-    makeGrid(height, width);
-});
-
-// When size is submitted by the user, call makeGrid()
 function makeGrid() {
-    for (var i = 1; i <= height; i++); {
-        ("pixelCanvas").append("<tr id=table" + i + "></tr>")
-        for (var j = 1; j <= width; j++) {
-            ("table" + i).append("<td></td>");
-        };
-    };
-    // Your code goes here!
-    function makeGrid(height, width) {
-        // clears any previously created table
-        ("tr").remove();
-        // draws by drag & drop
-        ("pixelCanvas").on("mousedown", "td", function() {
-            //event.preventDefault();
-            mouseDrag = true;
-        });
+    // Define user input height and width.
+    const pixelHeight = document.querySelector("#input_height").value;
+    const pixelWidth = document.querySelector("#input_width").value;
 
-        ("pixelCanvas").on("mousemove", "td", function() {
-            color = ("colorPicker").val();
-            if (mouseDrag) {
-                (this).css("background-color", color);
-            }
-        });
-        $("pixelCanvas").on("mouseup mouseleave dragstart", function() {
-            mouseDrag = false;
-        });
+    // Define table element.
+    const pixelTable = document.querySelector("#pixel_canvas");
 
-        // erases canvas
-        ("erase").click(function eraseTable() {
-            ("tr").remove();
-        });
+    // Clear the table when user re-submit height and width.
+    // https://stackoverflow.com/questions/7271490/delete-all-rows-in-an-html-table#answer-44971572
+    while (pixelTable.hasChildNodes()) {
+        pixelTable.removeChild(pixelTable.lastChild);
+    }
 
-        //erases drawing when you click clear
-        ("clear").click(function eraseTable() {
-            ("td").removeAttr("style");
-        });
-        ("td").removeAttr("style");
+    // Loops dynamically to create the table based on user input.
+    for (let row = 0; row < pixelHeight; row++) {
+        let tr = document.createElement('tr');
+        tr.id = 'row-' + row;
+        pixelTable.appendChild(tr);
+        for (let col = 0; col < pixelWidth; col++) {
+            let td = document.createElement('td');
+            td.id = 'row-' + row + '_cell-' + col;
+            pixelTable.lastChild.appendChild(td);
+        }
+    }
+
+    // Create new instances of the all document.querySelectorAll("td").
+    let tableCells = Array.from(document.querySelectorAll("td"));
+    // Each cell should have an event listener that sets the background color of the cell to the selected color.
+    tableCells.forEach(function(cell) {
+        cell.addEventListener("click", function() {
+            this.style.backgroundColor = document.querySelector("#colorPicker").value;
+        }, false);
     });
+}

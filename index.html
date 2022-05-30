@@ -8,21 +8,23 @@
 </head>
 
 <body>
-    <h1>Pixel Art Maker</h1>
+    <h1>🔬Lab👨‍🔬: 🅿️ixel👾 🅰️rt 🎨Ⓜ️aker👨‍🎨</h1>
 
-    <h2>Choose Grid Size</h2>
+    <h2>👆Choose🌐 Grid🔳 Size📐</h2>
     <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="inputHeight" name="height" min="1" value="1"> Grid Width:
-        <input type="number" id="inputWidth" name="width" min="1" value="1">
+        <label for="input_height">Grid Height: </label>
+        <input type="number" id="input_height" name="height" min="1" max="100" value="" required>
+        <label for="input_height">Grid Width: </label>
+        <input type="number" id="input_width" name="width" min="1" max="100" value="" required>
         <input type="submit">
+        <input type="button" value="Reset" onclick="window.location.reload()">
     </form>
 
-    <h2>Pick A Color</h2>
+    <h2>👆Pick A Color🎨</h2>
     <input type="color" id="colorPicker">
 
-    <h2>Design Canvas</h2>
-    <table id="pixelCanvas"></table>
+    <h2>👨‍🎨Design Canvas🖌</h2>
+    <table id="pixel_canvas"></table>
 
     <script src="design.js"></script>
 </body>
